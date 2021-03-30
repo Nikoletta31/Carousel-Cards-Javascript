@@ -1,0 +1,105 @@
+/* Reusable SASS styles */
+
+$color-blue: rgb(35, 101, 223);
+
+@mixin black-back {
+    background: rgb(49, 49, 49);
+    opacity:0.8;
+    position: absolute; 
+    color:white;
+    padding:5px 10px;
+}
+
+
+/* Styling of carousel elements */
+
+.carousel {
+    position: relative;
+    width: 1000px;
+    padding: 0px  40px 40px 40px;
+    margin-top:50px;
+  }
+  .carousel .img {
+    width:300px;
+    margin:0px 10px;
+    display: block;
+    box-shadow: 5px 10px 10px #b8b8b8;
+    background-color: rgb(255, 255, 255); 
+    border-radius:2px;
+}
+ 
+  .back {
+      height: 150px; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-size: cover;
+      position:relative;
+      border-top-left-radius:2px;
+      border-top-right-radius:2px;
+      .type {
+          bottom:0; 
+          left:0;
+          text-transform: uppercase;
+          font-size:15px;
+          @include black-back;
+      }
+      .time {
+        bottom:0; 
+        right:0;
+        @include black-back;
+    }
+    }
+    h3 {
+        padding:10px 10px 130px 20px; 
+        color:$color-blue;
+    }
+
+  .arrow {
+    position: absolute;
+    top: 0px;
+    padding: 165px 15px;
+    background: rgb(122, 122, 122);
+    opacity:0.5;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+    display: block;
+    border-radius:2px;
+  }
+  
+  .arrow:focus {
+    outline: none;
+  }
+  
+  .arrow:hover {
+    background: rgb(116, 116, 116);
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 7px;
+  }
+  
+  .next {
+    right: 7px;
+  }
+  
+  .gallery {
+    margin:10px 20px 10px 15px;;
+    width: 970px;
+    overflow: hidden;
+  }
+  
+  .gallery ul {
+    height: 400px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    font-size: 10;
+  }
+  
+  .gallery li {
+    display: inline-block;
+  }
